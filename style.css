@@ -1928,23 +1928,21 @@ footer a {
       margin: 12px 0;
     }
   }
-  /* FINAL TIMELINE ALIGNMENT FIX */
+  /* =========================================================
+   FINAL TIMELINE ALIGNMENT
+   Desktop: 3 columns aligned with the other timeline rows
+   Mobile: 1 column, exactly like the other timeline rows
+========================================================= */
+
   .timeline-row.final-row {
-    display: grid !important;
+    display: grid;
     grid-template-columns:
       var(--timeline-date-col)
       minmax(0, 1fr)
-      var(--timeline-detail-col) !important;
-
-    column-gap: var(--timeline-gap) !important;
-
-    padding-top: 42px !important;
-    padding-bottom: 42px !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+      var(--timeline-detail-col);
+    gap: var(--timeline-gap);
+    padding-top: 42px;
+    padding-bottom: 42px;
   }
 
   .timeline-row.final-row > span {
@@ -1958,17 +1956,36 @@ footer a {
   .timeline-row.final-row > small {
     grid-column: 3;
   }
+
   @media (max-width: 900px) {
+    .timeline-row.final-row {
+      display: grid !important;
+      grid-template-columns: 1fr !important;
+      gap: 6px !important;
+      padding: 50px 0 !important;
+    }
+
     .timeline-row.final-row > span,
     .timeline-row.final-row > b,
     .timeline-row.final-row > small {
-      grid-column: auto !important;
+      grid-column: 1 !important;
+      width: 100%;
+      min-width: 0;
     }
 
     .timeline-row.final-row > b {
+      font-size: 18px !important;
+      line-height: 1.45 !important;
       white-space: normal !important;
       word-break: keep-all !important;
-      line-height: 1.4;
+      overflow-wrap: normal !important;
+    }
+  }
+
+  @media (max-width: 520px) {
+    .timeline-row.final-row {
+      gap: 6px !important;
+      padding: 28px 0 !important;
     }
   }
 }
