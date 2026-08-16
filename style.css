@@ -792,52 +792,62 @@ img {
 
 .timeline-list {
   max-width: 1100px;
-
   margin: auto;
+
+  /* 모든 일정 행이 같은 열을 공유하도록 고정 */
+  --timeline-date-col: 190px;
+  --timeline-detail-col: 230px;
+  --timeline-gap: 20px;
 }
 
 .timeline-row {
   display: grid;
-
-  grid-template-columns: 190px 1fr 230px;
-
-  gap: 20px;
-
-  padding: 27px 0;
-
+  grid-template-columns:
+    var(--timeline-date-col)
+    minmax(0, 1fr)
+    var(--timeline-detail-col);
+  gap: var(--timeline-gap);
+  padding: 60px 0;
   border-bottom: 1px solid #dce7f2;
-
   align-items: center;
+}
+
+.timeline-row > span,
+.timeline-row > b,
+.timeline-row > small {
+  min-width: 0;
 }
 
 .timeline-row span {
   font-size: 12px;
-
   font-weight: 800;
-
   color: #1784ff;
 }
 
 .timeline-row b {
   font-size: 20px;
-
+  line-height: 1.35;
   letter-spacing: -0.03em;
 }
 
 .timeline-row small {
   color: #8092a4;
-
   font-size: 11px;
+  line-height: 1.6;
 }
 
 .final-row {
+  /* 마지막 행도 일반 일정 행과 완전히 동일한 3열 구조 */
+  display: grid;
+  grid-template-columns:
+    var(--timeline-date-col)
+    minmax(0, 1fr)
+    var(--timeline-detail-col);
+  gap: var(--timeline-gap);
   background: #edf6ff;
-
-  padding: 30px 20px;
-
+  padding: 42px 0;
   border-bottom: 2px solid #1784ff;
 }
-
 /* =========================================================
    AWARD
 ========================================================= */
@@ -1627,18 +1637,17 @@ footer a {
       max-width: 100%;
     }
 
-    .timeline-row {
+    .timeline-row,
+    .final-row {
       width: 100%;
-
       grid-template-columns: 1fr;
-
-      gap: 7px;
-
-      padding: 24px 0;
+      gap: 10px;
+      padding: 50px 0;
     }
 
     .timeline-row b {
       font-size: 18px;
+      line-height: 1.45;
     }
 
     /* =====================================================
@@ -1866,8 +1875,9 @@ footer a {
 
     /* ---------- Timeline ---------- */
 
-    .timeline-row {
-      padding: 22px 0;
+    .timeline-row,
+    .final-row {
+      padding: 28px 0;
     }
 
     /* ---------- Award ---------- */
