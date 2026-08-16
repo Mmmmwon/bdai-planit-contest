@@ -1959,11 +1959,16 @@ footer a {
     grid-column: 3;
   }
   @media (max-width: 900px) {
-    .timeline-row > b,
-    .final-row > b {
-      white-space: nowrap;
+    .timeline-row > b {
       word-break: keep-all;
-      font-size: 20px;
+      white-space: normal;
+    }
+
+    .final-row > b {
+      word-break: keep-all;
+      white-space: normal;
+      font-size: 18px;
+      line-height: 1.4;
     }
   }
 }
