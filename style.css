@@ -1392,4 +1392,530 @@ footer a {
   footer p {
     margin: 14px 0;
   }
+  /* =========================================================
+   MOBILE RESPONSIVE FIX
+   ========================================================= */
+
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* =========================
+   TABLET
+========================= */
+
+  @media (max-width: 900px) {
+    /* ---------- Header ---------- */
+
+    .site-header {
+      width: 100%;
+      height: 64px;
+      padding: 0 20px;
+      gap: 12px;
+    }
+
+    .brand {
+      gap: 6px;
+      min-width: 0;
+    }
+
+    .brand img {
+      width: 68px;
+      max-width: 68px;
+    }
+
+    .brand .planit-logo {
+      width: 76px;
+      max-width: 76px;
+    }
+
+    .brand-x {
+      font-size: 14px;
+    }
+
+    .main-nav {
+      display: none;
+    }
+
+    .header-cta {
+      padding: 9px 11px;
+      font-size: 10px;
+      gap: 5px;
+      flex-shrink: 0;
+    }
+
+    /* ---------- Hero ---------- */
+
+    .hero {
+      min-height: auto;
+      padding-top: 110px;
+      padding-bottom: 70px;
+    }
+
+    .hero-grid {
+      width: 100%;
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hero-copy {
+      width: 100%;
+    }
+
+    .hero h1 {
+      font-size: clamp(56px, 13vw, 82px);
+      line-height: 0.95;
+    }
+
+    .hero-sub {
+      font-size: 15px;
+      margin: 25px 0;
+    }
+
+    .hero-meta {
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    /*
+    중요:
+    데스크톱에서 absolute였던 이미지를
+    모바일에서는 일반적인 영역 안에 넣음.
+  */
+
+    .hero-visual {
+      width: 100%;
+      min-width: 0;
+      min-height: 330px;
+      margin-top: 25px;
+      position: relative;
+      overflow: visible;
+    }
+
+    .hero-visual img {
+      position: absolute;
+
+      width: 105%;
+      max-width: 105%;
+
+      height: auto;
+
+      right: -2.5%;
+      left: auto;
+
+      top: 50%;
+
+      transform: translateY(-50%);
+
+      object-fit: contain;
+    }
+
+    .visual-label {
+      font-size: 8px;
+    }
+
+    .label-1 {
+      top: 8%;
+      left: 4%;
+    }
+
+    .label-2 {
+      top: 45%;
+      right: 3%;
+    }
+
+    .label-3 {
+      bottom: 8%;
+      left: 15%;
+    }
+
+    /* ---------- Common ---------- */
+
+    .section {
+      width: 100%;
+      max-width: 100%;
+      padding: 85px 6vw;
+    }
+
+    .section-head {
+      width: 100%;
+    }
+
+    /* ---------- About ---------- */
+
+    .intro-content {
+      width: 100%;
+      max-width: 100%;
+
+      display: block;
+    }
+
+    .intro h2 {
+      font-size: clamp(38px, 8vw, 58px);
+    }
+
+    .body-copy {
+      max-width: 100%;
+      margin-top: 30px;
+    }
+
+    /* ---------- Signal ---------- */
+
+    .signal-grid {
+      width: 100%;
+      max-width: 100%;
+
+      grid-template-columns: 1fr;
+    }
+
+    .signal-card {
+      width: 100%;
+      min-width: 0;
+    }
+
+    /* ---------- Flow ---------- */
+
+    .flow-wrap {
+      width: 100%;
+      max-width: 100%;
+
+      grid-template-columns: 1fr 1fr;
+
+      row-gap: 55px;
+    }
+
+    .flow-item {
+      min-width: 0;
+    }
+
+    .flow-item strong {
+      font-size: 20px;
+    }
+
+    /* ---------- Process ---------- */
+
+    .process-grid {
+      width: 100%;
+      max-width: 100%;
+
+      grid-template-columns: 1fr;
+    }
+
+    .process-card {
+      width: 100%;
+      min-width: 0;
+      padding: 35px;
+    }
+
+    .process-card h3 {
+      font-size: 32px;
+    }
+
+    .presentation-note {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    /* ---------- Timeline ---------- */
+
+    .timeline-list {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .timeline-row {
+      width: 100%;
+
+      grid-template-columns: 1fr;
+
+      gap: 7px;
+
+      padding: 24px 0;
+    }
+
+    .timeline-row b {
+      font-size: 18px;
+    }
+
+    /* =====================================================
+     AWARD
+     여기서 가로 잘림을 확실하게 방지
+  ===================================================== */
+
+    .award {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .award-title {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .award-title h2 {
+      font-size: clamp(40px, 9vw, 62px);
+      word-break: keep-all;
+    }
+
+    .award-grid {
+      width: 100%;
+      max-width: 100%;
+
+      display: grid;
+
+      grid-template-columns: 1fr;
+
+      gap: 14px;
+    }
+
+    .award-card {
+      width: 100%;
+      min-width: 0;
+
+      min-height: 220px;
+
+      padding: 30px;
+    }
+
+    .award-card h3 {
+      font-size: 30px;
+      margin: 30px 0 18px;
+    }
+
+    .award-card strong {
+      font-size: 14px;
+    }
+
+    .award-note {
+      width: 100%;
+      max-width: 100%;
+
+      word-break: keep-all;
+    }
+
+    /* ---------- Final Apply ---------- */
+
+    .apply {
+      width: 100%;
+      max-width: 100%;
+
+      min-height: 650px;
+
+      padding-top: 90px;
+      padding-bottom: 90px;
+
+      display: flex;
+      align-items: center;
+    }
+
+    .apply-content {
+      width: 100%;
+      max-width: 100%;
+
+      margin-left: 0;
+    }
+
+    .apply h2 {
+      font-size: clamp(44px, 10vw, 68px);
+      word-break: keep-all;
+    }
+
+    .apply p {
+      font-size: 14px;
+    }
+
+    .apply-visual {
+      width: 100%;
+      max-width: 100%;
+
+      right: -45%;
+
+      opacity: 0.18;
+    }
+
+    /* ---------- Footer ---------- */
+
+    footer {
+      width: 100%;
+      max-width: 100%;
+
+      padding: 30px 6vw;
+
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 18px;
+    }
+
+    footer .footer-brand {
+      width: 100%;
+    }
+
+    footer p {
+      width: 100%;
+      flex: none;
+    }
+  }
+
+  /* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+  @media (max-width: 520px) {
+    .site-header {
+      padding: 0 15px;
+    }
+
+    .brand img {
+      width: 61px;
+      max-width: 61px;
+    }
+
+    .brand .planit-logo {
+      width: 70px;
+      max-width: 70px;
+    }
+
+    .brand-x {
+      font-size: 13px;
+    }
+
+    .header-cta {
+      padding: 8px 9px;
+      font-size: 9px;
+    }
+
+    /* ---------- Hero ---------- */
+
+    .hero {
+      padding-top: 95px;
+      padding-left: 5vw;
+      padding-right: 5vw;
+    }
+
+    .hero h1 {
+      font-size: clamp(50px, 15vw, 66px);
+    }
+
+    .hero-sub {
+      font-size: 14px;
+    }
+
+    .hero-meta strong {
+      font-size: 12px;
+    }
+
+    .hero-visual {
+      min-height: 280px;
+      margin-top: 15px;
+    }
+
+    .hero-visual img {
+      width: 110%;
+      max-width: 110%;
+
+      right: -5%;
+    }
+
+    .label-2,
+    .label-3 {
+      display: none;
+    }
+
+    /* ---------- Sections ---------- */
+
+    .section {
+      padding: 70px 5vw;
+    }
+
+    /* ---------- Signal ---------- */
+
+    .signal-card {
+      min-height: 285px;
+      padding: 30px;
+    }
+
+    .signal-icon {
+      margin-bottom: 35px;
+    }
+
+    /* ---------- Flow ---------- */
+
+    .flow-wrap {
+      grid-template-columns: 1fr;
+      gap: 45px;
+    }
+
+    .flow-item {
+      padding: 0;
+    }
+
+    /* ---------- Process ---------- */
+
+    .process-card {
+      padding: 28px;
+    }
+
+    .process-card h3 {
+      font-size: 28px;
+    }
+
+    /* ---------- Timeline ---------- */
+
+    .timeline-row {
+      padding: 22px 0;
+    }
+
+    /* ---------- Award ---------- */
+
+    .award-title h2 {
+      font-size: 43px;
+    }
+
+    .award-card {
+      padding: 27px;
+
+      min-height: 205px;
+    }
+
+    .award-card h3 {
+      font-size: 28px;
+    }
+
+    /* ---------- Apply ---------- */
+
+    .apply {
+      min-height: 620px;
+
+      padding-top: 70px;
+      padding-bottom: 70px;
+    }
+
+    .apply h2 {
+      font-size: 46px;
+    }
+
+    .apply-visual {
+      right: -65%;
+      opacity: 0.12;
+    }
+
+    /* ---------- Footer ---------- */
+
+    footer {
+      display: block;
+    }
+
+    footer .footer-brand {
+      margin-bottom: 15px;
+    }
+
+    footer p {
+      margin: 12px 0;
+    }
+  }
 }
