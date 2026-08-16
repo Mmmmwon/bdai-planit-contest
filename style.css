@@ -1959,15 +1959,15 @@ footer a {
     grid-column: 3;
   }
   @media (max-width: 900px) {
-    .timeline-row > b {
-      word-break: keep-all;
-      white-space: normal;
+    .timeline-row.final-row > span,
+    .timeline-row.final-row > b,
+    .timeline-row.final-row > small {
+      grid-column: auto !important;
     }
 
-    .final-row > b {
-      word-break: keep-all;
-      white-space: normal;
-      font-size: 18px;
+    .timeline-row.final-row > b {
+      white-space: normal !important;
+      word-break: keep-all !important;
       line-height: 1.4;
     }
   }
