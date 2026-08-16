@@ -1928,4 +1928,34 @@ footer a {
       margin: 12px 0;
     }
   }
+  /* FINAL TIMELINE ALIGNMENT FIX */
+  .timeline-row.final-row {
+    display: grid !important;
+    grid-template-columns:
+      var(--timeline-date-col)
+      minmax(0, 1fr)
+      var(--timeline-detail-col) !important;
+
+    column-gap: var(--timeline-gap) !important;
+
+    padding-top: 42px !important;
+    padding-bottom: 42px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .timeline-row.final-row > span {
+    grid-column: 1;
+  }
+
+  .timeline-row.final-row > b {
+    grid-column: 2;
+  }
+
+  .timeline-row.final-row > small {
+    grid-column: 3;
+  }
 }
