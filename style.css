@@ -1958,4 +1958,12 @@ footer a {
   .timeline-row.final-row > small {
     grid-column: 3;
   }
+  @media (max-width: 900px) {
+    .timeline-row > b,
+    .final-row > b {
+      white-space: nowrap;
+      word-break: keep-all;
+      font-size: 20px;
+    }
+  }
 }
